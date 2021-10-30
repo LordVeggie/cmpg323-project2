@@ -9,58 +9,65 @@
     <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
-    <form action="">
+    <form action="" class="container flex-center-column">
 
-        <div>
+        <div class="flex-center-column">
             <!--this will be the title and loggo-->
         </div>
-        <div>
+
+        <h1 class="flex-center-column">
+            Sign-up
+        </h1>
+
+        <div class="flex-center-column textbox-container">
             <!--this will be email field-->
             <label for="email">Email</label>
-            <br>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" required class="textbox">
         </div>
-        <div>
+
+        <div class="flex-center-column textbox-container">
             <!--this will be first name field-->
             <label for="fname">First name</label>
-            <br>
-            <input type="text" name="fname" id="fname" required>
+            <input type="text" name="fname" id="fname" required class="textbox">
         </div>
-        <div>
+
+        <div class="flex-center-column textbox-container">
             <!--this will be last name field-->
             <label for="lname">Last name</label>
-            <br>
-            <input type="text" name="lname" id="lname" required>
+            <input type="text" name="lname" id="lname" required class="textbox">
         </div>
-        <div>
+
+        <div class="flex-center-column textbox-container">
             <!--this will be user name field-->
             <label for="uname">User name</label>
-            <br>
-            <input type="text" name="uname" id="uname" required>
+            <input type="text" name="uname" id="uname" required class="textbox">
         </div>
-        <div>
+
+        <div class="flex-center-column textbox-container">
             <!--this will be password fiels-->
             <label for="pass">Password</label>
-            <br>
-            <input type="password" name="pass" id="pass" required>
+            <input type="password" name="pass" id="pass" required class="textbox">
         </div>
-        <div>
+
+        <div class="flex-center-column textbox-container">
             <!--this will be confirm password fiels-->
             <label for="passCon">Confirm Password</label>
-            <br>
-            <input type="password" name="passCon" id="passCon" required>
+            <input type="password" name="passCon" id="passCon" required class="textbox">
         </div>
-        <div>
+
+        <div class="flex-center-column textbox-container">
             <!--this will be used for error messages-->
         </div>
-        <div>
+
+        <div class="flex-center-column">
             <!--this will be submit button-->
             <!--if inpout is correct and validated navigate user to home page else error meassage-->
-            <button>Sign Up</button>
+            <button class="btn">Sign Up</button>
         </div>
-        <nav>
+
+        <nav class="flex-center-column ">
             <!--this will be navigation to sign up page-->
-            <a href="./login.html">Login</a>
+            <a href="./login.html" class="flex-center-column nav">Login</a>
         </nav>
     </form>
 </body>

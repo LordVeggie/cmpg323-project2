@@ -9,34 +9,38 @@
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <form action="">
+    <form action="" class="container flex-center-column">
 
-        <div>
+        <div class="flex-center-column">
             <!--this will be the title and loggo-->
+            <h1>Login</h1>
         </div>
-        <div>
+
+        <div class="flex-center-column textbox-container">
             <!--this will be email field-->
             <label for="email">Email</label>
-            <br>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" required class="textbox">
         </div>
-        <div>
+
+        <div class="flex-center-column textbox-container">
             <!--this will be password fiels-->
             <label for="pass">Password</label>
-            <br>
-            <input type="password" name="pass" id="pass" required>
+            <input type="password" name="pass" id="pass" required class="textbox">
         </div>
-        <div>
+
+        <div class="flex-center-column textbox-container">
             <!--this will be used for error messages-->
         </div>
-        <div>
+
+        <div class="flex-center-column">
             <!--this will be submit button-->
             <!--if inpout is correct and validated navigate user to home page else error meassage-->
-            <button>Login</button>
+            <button class="btn">Login</button>
         </div>
-        <nav>
+
+        <nav class="flex-center-column nav">
             <!--this will be navigation to sign up page-->
-            <a href="./signup.html">Sign Up</a>
+            <a href="./signup.html" class="flex-center-column nav">Sign Up</a>
         </nav>
     </form>
     
