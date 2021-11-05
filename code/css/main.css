@@ -1,13 +1,33 @@
 /*the main css for all pages setting back Ground color of pages and the main colour pallet and theme of the website*/
 :root
 {
-    background-color: #203347;
-    font-size: 62.5%;
+    background-color: #111a24;
+    font-size: 10px;
+    margin: 0;
+
+    animation-duration: 360s;
+    animation-name: backgroundOfPage;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes backgroundOfPage
+{
+    /*should be a snowflake background*/
+    from
+    {
+        background-color: #111a24;
+    }  
+    to
+    {
+        background-color: pink;
+    }
+    
 }
 
 * {
 box-sizing: border-box;
-font-size: Arial, Halvetica, sans-serif ;
+font-size:  sans-serif, Arial;
 margin: 0;
 padding: 0;
 color: #FF652F;
@@ -113,6 +133,7 @@ h3
     text-decoration: none;
     color: white;
     background-color: #45A29E;
+    border-radius: 3rem;
 }
 
 .btn:hover
@@ -145,7 +166,7 @@ h3
     width: 20rem;
     text-align: center;
     border: 0 1rem solid #45A29E;
-    border-radius: 1rem;
+    border-radius: 3rem;
     margin-bottom: 0.5rem;
     text-decoration: none;
     color: #14A76C;

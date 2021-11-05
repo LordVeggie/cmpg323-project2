@@ -1,0 +1,64 @@
+/* all css relating to the gallery and the styling of the images and albulms on the gallery page
+this will alos include the css for the the metta data of the images */
+
+/* utilities */
+.image
+{
+    /* images */
+    margin: none;
+    background-color: aquamarine;
+    height: 20rem;
+    width: 20rem;
+    border: solid red 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+}
+
+.imageWithMetta
+{
+    /* images with metta data and bounding box and nvigation next and previous buttons for images*/
+    margin: none;
+}
+
+.Metta
+{
+    /* metta data */
+    margin: none;
+}
+
+
+/* images no albums */
+
+.imageGroup
+{
+    /* all images that the user as acces to  */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 70rem;
+}
+
+/* image albums  */
+
+.Albums
+{
+    /* container for a list of albums  */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagesAndAlbums
+{
+    /* container for images and a list of albums */
+    display: flex;
+    justify-content: start;
+}
+
+.imageAlbum
+{
+    /* all images in that album  */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
