@@ -5,14 +5,29 @@ this will alos include the css for the the metta data of the images */
 .image
 {
     /* images */
+    background-image: url("https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png");
     margin: none;
-    background-color: aquamarine;
+    background-color:  #636464;
     height: 20rem;
     width: 20rem;
-    border: solid red 0.5rem;
+    border: 0.5rem inset #45A29E;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    
+    border-radius: 1rem;
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;       
+}
+
+.image:hover
+{
+    /* allowes the user to see they can interact with the image */
+    cursor: pointer;
+    box-shadow: 0.3rem 0.3rem 0 #C5C6C7;
+    transform: translate(-0.2rem,-0.2rem);
+    transition: transform 150ms;
 }
 
 .imageWithMetta
@@ -61,4 +76,13 @@ this will alos include the css for the the metta data of the images */
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.navigation
+{
+    display: flex;
+    margin-right: 1rem;
+    min-width: 15rem;
+    justify-content: space-evenly;
+    width:auto;
 }

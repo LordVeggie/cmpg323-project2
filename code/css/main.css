@@ -128,7 +128,7 @@ h3
     padding: 1rem;
     width: 20rem;
     text-align: center;
-    border: 0 1rem solid #C5C6C7;
+    border: 0.3rem inset #C5C6C7;
     margin-bottom: 1rem;
     text-decoration: none;
     color: white;
@@ -165,8 +165,9 @@ h3
     padding: 0.5rem;
     width: 20rem;
     text-align: center;
-    border: 0 1rem solid #45A29E;
+    border: 0.3rem inset #45A29E;
     border-radius: 3rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     text-decoration: none;
     color: #14A76C;
@@ -178,4 +179,125 @@ h3
     width: 100%;
     margin-bottom: 0.5rem;
     font-size: 1.8rem;
+}
+
+.navigationBar
+{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    background-color:  #636464;
+    height: 8rem;
+    justify-content: space-between;
+    font-size: 2rem;    
+    border-bottom: 0.2rem solid #45A29E;
+}
+
+.logo
+{
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    flex-grow: 1;
+    background-image: url("../images\ of\ pages/logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+}
+
+.logoAndText
+{
+    display: flex;
+    margin-left: 1rem;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.navigation
+{
+    display: flex;
+    margin-right: 1rem;
+    min-width: 25rem;
+    justify-content: space-evenly;  
+    width: 30%;
+}
+
+.navElement
+{
+    margin: auto;
+    text-decoration: none;
+}
+
+.navElement:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.bodyOfPage
+{
+    padding-top: 10rem;
+}
+
+.notification
+{
+    /* notification */
+    display: flex;
+    margin: none;
+    background-color:  #636464;
+    width: 100rem;
+    min-height: 10rem;
+    border: 0.5rem inset #45A29E;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;   
+    font-size: 2rem;
+    justify-content:space-around;
+}
+
+.notificationText
+{
+    border: none;
+    display: flex;
+    height: 100%;
+    width: 70%;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 2rem;
+    border-right: 0.25rem inset #45A29E;
+}
+
+.notificationButons
+{
+    margin: auto;
+    display: flex;
+    height: 100%;
+    width: 30%;
+    max-height: 20rem;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-left: .5rem;
+}
+
+.notification .btn
+{
+    width: 70%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notificationGroup
+{
+    /* all notification that the user as acces to  */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 70rem;
 }
