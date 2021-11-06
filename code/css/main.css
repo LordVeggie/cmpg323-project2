@@ -1,4 +1,5 @@
 /*the main css for all pages setting back Ground color of pages and the main colour pallet and theme of the website*/
+
 :root
 {
     background-color: #111a24;
@@ -153,10 +154,18 @@ h3
 
 .nav
 {
-    width: 100%;
+    width: 50%;
     margin-bottom: 0.5rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #14A76C;
+    text-decoration: none;
+    font-weight:bolder;
+}
+
+.nav:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .textbox
@@ -241,63 +250,3 @@ h3
     padding-top: 10rem;
 }
 
-.notification
-{
-    /* notification */
-    display: flex;
-    margin: none;
-    background-color:  #636464;
-    width: 100rem;
-    min-height: 10rem;
-    border: 0.5rem inset #45A29E;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 1rem;
-    border-top-left-radius: 5rem;
-    border-bottom-right-radius: 5rem;   
-    font-size: 2rem;
-    justify-content:space-around;
-}
-
-.notificationText
-{
-    border: none;
-    display: flex;
-    height: 100%;
-    width: 70%;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 2rem;
-    border-right: 0.25rem inset #45A29E;
-}
-
-.notificationButons
-{
-    margin: auto;
-    display: flex;
-    height: 100%;
-    width: 30%;
-    max-height: 20rem;
-    justify-content: space-evenly;
-    flex-direction: column;
-    padding-top: 1rem;
-    padding-left: .5rem;
-}
-
-.notification .btn
-{
-    width: 70%;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.notificationGroup
-{
-    /* all notification that the user as acces to  */
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    max-width: 70rem;
-}
