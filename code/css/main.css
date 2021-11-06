@@ -2,6 +2,7 @@
 
 :root
 {
+    box-sizing: border-box;
     background-color: #111a24;
     font-size: 10px;
     margin: 0;
@@ -92,6 +93,15 @@ h3
      /*center*/
      justify-content: center;
      align-items: center;
+}
+
+.flex-row
+{
+    /*column*/
+    display: flex;
+    flex-direction: row;
+    /*center*/
+    justify-content: start;
 }
 
 .flex-column
