@@ -183,7 +183,7 @@
     display: flex;
     flex-direction: column;
     width: 30%;
-    justify-content: space-evenly;
+    justify-content: end;
 }
 
 .removefriendButtonsContainer
@@ -194,7 +194,6 @@
     justify-content: center;
     padding: auto;
     justify-self: center;
-
 }
 
 .removefriendButtonsContainer .btn

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/account.css">
+</head>
+<body>
+    <div>
+        <!--this div makes sure the pace of the page works with out it no work-->
+       <div class=" navigationBar ">            
+           <div class=" logoAndText ">
+               <!--this will be the title and loggo-->
+               <div class=" logo "></div>
+               <label >Snowy Owl</label>                
+           </div>
+       
+            <nav class=" navigation ">
+                <!--this will be navigation to account sign out and a few other stuff-->
+                <a href="./home.html" class="navElement">Home</a>
+            </nav>             
+       </div>
+   </div>
+
+    <form action="" class="container flex-center-column">
+
+        <div class="flex-center-column">
+            <!--this will be the title and loggo-->
+        </div>
+
+        <h1 class="flex-center-column">
+            Account
+        </h1>
+
+        <div class="flex-center-column textbox-container">
+            <!--this will be email field-->
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required class="textbox">
+        </div>
+
+        <div class="flex-center-column textbox-container">
+            <!--this will be first name field-->
+            <label for="fname">First name</label>
+            <input type="text" name="fname" id="fname" required class="textbox">
+        </div>
+
+        <div class="flex-center-column textbox-container">
+            <!--this will be last name field-->
+            <label for="lname">Last name</label>
+            <input type="text" name="lname" id="lname" required class="textbox">
+        </div>
+
+        <div class="flex-center-column textbox-container">
+            <!--this will be user name field-->
+            <label for="uname">User name</label>
+            <input type="text" name="uname" id="uname" required class="textbox">
+        </div>
+
+        <div class="flex-center-column textbox-container">
+            <!--this will be password fiels-->
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" required class="textbox">
+        </div>
+
+        <div class="flex-center-column textbox-container">
+            <!--this will be confirm password fiels-->
+            <label for="passCon">Confirm Password</label>
+            <input type="password" name="passCon" id="passCon" required class="textbox">
+        </div>
+
+        <div class="flex-center-column textbox-container">
+            <!--this will be used for error messages-->
+        </div>
+
+        <div class="flex-center-column">
+            <!--this will be submit button-->
+            <!--if inpout is correct and validated navigate user to home page else error meassage-->
+            <button class="btn">Update</button>
+        </div>
+    </form>
+</body>
+</html>

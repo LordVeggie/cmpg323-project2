@@ -1,0 +1,8 @@
+.navigation
+{
+    display: flex;
+    margin-right: 1rem;
+    min-width: 10rem;
+    justify-content: space-evenly;
+    width:auto;
+}
