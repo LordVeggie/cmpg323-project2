@@ -1,4 +1,4 @@
-/*css sheet for shared page*/
+/*css sheet for friends page*/
 
 /* overide other style sheets css sheet */
 
@@ -6,7 +6,7 @@
 {
     display: flex;
     margin-right: 1rem;
-    min-width: 20rem;
+    min-width: 10rem;
     justify-content: space-evenly;
     width:auto;
 }
@@ -57,6 +57,18 @@
 }
 
 /* friends */
+
+.friendsText
+{
+    border: none;
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0.5rem ;
+    margin: 0 auto;
+    text-align: center;    
+}
 
 .frendListComntainer
 {
@@ -120,113 +132,6 @@
     font-size: 2rem;
 }
 
-/* chat */
-
-
-.chat
-{
-    /* chat bubble */
-    display: flex;
-    margin: none;
-    background-color:  #636464;
-    width: 100%;
-    min-height: 10rem;
-    border: 0.5rem inset #45A29E;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
-    border-top-left-radius: 5rem;
-    border-bottom-right-radius: 5rem;   
-    font-size: 2rem;
-    justify-content:space-around;
-    flex-direction: column;
-}
-
-.chatText
-{
-    border: none;
-    display: flex;
-    width: 70%;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 0.5rem ;
-    margin: 0 auto;
-    text-align: center;    
-}
-
-.cahtStatus
-{
-    border: none;
-    display: flex;
-    width: 100%;
-    justify-content:start;
-    padding: 1rem 2rem;
-}
-
-.cahtTime
-{
-    border: none;
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    padding: 1rem 2rem;
-}
-
-.read
-{
-    border-color: green;
-}
-
-.read .cahtTime, .read  .cahtStatus
-{
-    color: green;
-}
-
-.sent
-{
-    border-color: red;
-}
-
-.sent .cahtTime, .sent  .cahtStatus
-{
-    color: red;
-}
-
-.myChat
-{
-    margin-left: 40%;
-    justify-self: end;
-}
-
-.otherChat
-{
-    margin-right: 40%;
-    justify-self: start;
-}
-
-.otherChat .cahtStatus
-{
-    justify-content: end;
-}
-
-.otherChat .cahtTime
-{
-    justify-content: start;
-}
-
-.notificationButons
-{
-    margin: auto;
-    display: flex;
-    height: 100%;
-    width: 30%;
-    max-height: 20rem;
-    justify-content: space-evenly;
-    flex-direction: column;
-    padding-top: 1rem;
-    padding-left: .5rem;
-}
-
 .conversation .btn
 {
     width: 70%;
@@ -247,7 +152,7 @@
     padding-bottom: 10rem;
 }
 
-.chatTitle
+.Title
 {
     position: fixed;
     z-index: 1000;
@@ -262,7 +167,7 @@
     font-size: 2rem;
 }
 
-.chatNew
+.friendNew
 {
     position: fixed;    
     z-index: 1000;
@@ -273,11 +178,27 @@
     border-top: 0.3rem inset #45A29E;
 }
 
-.chatNewButtonsContainer
+.friendNewButtonsContainer
 {
     display: flex;
     flex-direction: column;
     width: 30%;
     justify-content: space-evenly;
-    
+}
+
+.removefriendButtonsContainer
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding: auto;
+    justify-self: center;
+
+}
+
+.removefriendButtonsContainer .btn
+{
+    width: 100%;
+    margin: auto;
 }
