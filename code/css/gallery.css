@@ -64,6 +64,15 @@ this will alos include the css for the the metta data of the images */
     justify-self: center; 
     height: 50rem;
     width: 50rem;
+    
+}
+
+.imageWithMetta .image:hover
+{
+    cursor: default;
+    box-shadow: none;
+    transform: none;
+    transition: none;
 }
 /* images no albums */
 
