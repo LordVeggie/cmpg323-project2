@@ -28,6 +28,7 @@
     flex-direction: column;
     padding: 2rem;
     border-right: 0.25rem inset #45A29E;
+    text-align: center;
 }
 
 .notificationButons
