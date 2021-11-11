@@ -25,25 +25,6 @@ function friend(username)
 
 //chat bubbels
 
-<div class="chat myChat read">
-
-    <div class="cahtStatus">
-        R
-    </div>
-
-    <div class="image">
-
-    </div>
-
-    <div class="chatText">
-        here is the new logo tim
-    </div>
-
-    <div class="cahtTime">
-        10:00
-     </div>
-
-</div>
 
 function myChat(status, time, text = '', image = '')
 {
@@ -51,52 +32,113 @@ function myChat(status, time, text = '', image = '')
 
     //bounding box of the chat
     const chat = document.createElement('div');
-    friendContainer.classList.add('friend');
+    chat.classList.add('chat');
+    chat.classList.add('myChat');
+
+    if(status === true)
+    {
+        chat.classList.add('read');
+        status = 'R';
+    }
+    else
+    {
+        chat.classList.add('sent');
+        status = 'S';
+    }
 
     //status
-    const text = document.createElement('div');
-    text.classList.add('chatText');
-    text.innerText = username;
+    const chatStatus = document.createElement('div');
+    chatStatus.classList.add('cahtStatus');
+    chatStatus.innerText = status;
 
     //image
+    const chatImage = document.createElement('div');
     if(image !== '')
     {
-        const text = document.createElement('div');
-        text.classList.add('chatText');
-        text.innerText = username;
+        chatImage.classList.add('image');
+        chatImage.style.backgroundImage = `url(${image})`;
     }
     
     //text
     const chatText = document.createElement('div');
     chatText.classList.add('chatText');
-    chatText.innerText = username;
+    chatText.innerText = text;
 
     //time
     const chatTime = document.createElement('div');
-    chatTime.classList.add('chatText');
+    chatTime.classList.add('cahtTime');
     chatTime.innerText = time;
 
     //appending everyting
 
-    chat.appendChild(text);
+    chat.appendChild(chatStatus);
     if(image !== '')
     {
-        chat.appendChild(text);
+        chat.appendChild(chatImage);
     }
     chat.appendChild(chatText);
     chat.appendChild(chatTime);
 
-    firenList.appendChild(chat);
-    
-    
+    chats.appendChild(chat); 
 }
 
 function otherChat(status, time, text = '', image = '')
 {
+    //creating everyting
 
+    //bounding box of the chat
+    const chat = document.createElement('div');
+    chat.classList.add('chat');
+    chat.classList.add('otherChat');
+
+    if(status === true)
+    {
+        chat.classList.add('read');
+        status = 'R';
+    }
+    else
+    {
+        chat.classList.add('sent');
+        status = 'S';
+    }
+
+    //status
+    const chatStatus = document.createElement('div');
+    chatStatus.classList.add('cahtStatus');
+    chatStatus.innerText = status;
+
+    //image
+    const chatImage = document.createElement('div');
+    if(image !== '')
+    {
+        chatImage.classList.add('image');
+        chatImage.style.backgroundImage = `url(${image})`;
+    }
+    
+    //text
+    const chatText = document.createElement('div');
+    chatText.classList.add('chatText');
+    chatText.innerText = text;
+
+    //time
+    const chatTime = document.createElement('div');
+    chatTime.classList.add('cahtTime');
+    chatTime.innerText = time;
+
+    //appending everyting
+
+    chat.appendChild(chatStatus);
+    if(image !== '')
+    {
+        chat.appendChild(chatImage);
+    }
+    chat.appendChild(chatText);
+    chat.appendChild(chatTime);
+
+    chats.appendChild(chat); 
 }
 
-function createChat(id1, id2, status1, status2,time, text = '', image = '')
+function createChat(id1, id2, status1, status2, time, text = '', image = '')
 {
     //test the status to see the color of the caht borde, status and time
     //test the ids to see on what side the chat should be l or r
@@ -104,13 +146,13 @@ function createChat(id1, id2, status1, status2,time, text = '', image = '')
     {
         //my chat
          //makes chat green or red
-         myChat();
+         myChat(status1, time, text, image);
     }
-    else if(id2 !== 1)
+    else if(id2 === 1)
     {
         //other persons caht
         //makes chat green or red
-        otherChat();
+        otherChat(status2, time, text, image);
     }
 }
 
@@ -122,4 +164,13 @@ for(let i = 1; i<=5;i++)
 {
     friend('bobbyyyyyys '+i)
 }
+
+
+createChat(1, 2, true, true, '8:19am', 'hello here is the new loggo', 'https://wl-brightside.cf.tsp.li/resize/1200x630/jpg/91d/63f/44486f5de79c81f99f044e8615.jpg');
+
+createChat(1, 2, true, true, '8:20am', 'hello here is the new loggo', image = '');
+
+createChat(2, 1, true, true, '8:19am', 'hello here is the new loggo', 'https://wl-brightside.cf.tsp.li/resize/1200x630/jpg/91d/63f/44486f5de79c81f99f044e8615.jpg');
+
+createChat(2, 1, true, false, '8:20am', 'hello here is the new loggo', image = '');
 
