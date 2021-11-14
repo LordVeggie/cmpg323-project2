@@ -168,6 +168,7 @@ this will alos include the css for the the metta data of the images */
     border-right: 0.5rem inset #45A29E;
     width: 30%;
     min-width: 20rem;
+    padding-bottom: 2rem;
 }
 
 .imagesAndAlbums

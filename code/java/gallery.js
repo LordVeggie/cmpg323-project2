@@ -1,6 +1,13 @@
 //this is where i will add the denamic content ofthe page to 
 const bodyOfGallery = document.querySelector('#bodyOfGallery');
 
+function removeAllChildNodes(parent) {
+    //use this to change lay outs and use this to remove images when changing the albums
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
 function creatTextBox(text, name)
 {
     //create
@@ -45,6 +52,24 @@ function creatImage(image)
     return(Image)
 }
 
+//singal album
+function createAlbum(name)
+{
+    //create
+    const album = document.createElement('div');
+    album.classList.add('album');
+
+    const text = document.createElement('div');
+    text.classList.add('albumText');
+    text.innerText = name;
+
+    //append
+    album.appendChild(text);
+
+    return album;
+}
+
+
 //diffrent layouts 
 
 function layoutAllImages()
@@ -84,7 +109,7 @@ function layoutImageAndMettaData(name, image)
     const container = document.createElement('div');
 
     const title = document.createElement('div');
-    title.classList.add('title')
+    title.classList.add('title');
 
     const titleLabel = document.createElement('label');
     titleLabel.innerText = name;
@@ -157,11 +182,69 @@ function layoutImageAndMettaData(name, image)
     bodyOfGallery.appendChild(container);
 }
 
+//    <div class=" imagesAndAlbums">
+//
+//        <div class="albums flex-center-column">
+//            <!--list of albums-->
+//            <div class=" title ">
+//                <label for="title"> Albums </label>
+//            </div>
+//
+//            <!--this will be albums-->
+//
+//        </div>
+//
+//        <div class="  imageGroup ">
+//            <div class=" title ">
+//                <label for="title"> Default </label>
+//            </div>
+//
+//        </div>
+//
+//    </div>
+
 function layoutAlbumsAndImages()
 {
     //changes the layout of the page to show images according to the active album
     //always has default album and creat new album above the rest of the albums 
 
+    const imagesAndAlbums = document.createElement('div');
+    imagesAndAlbums.classList.add('imagesAndAlbums');
+    
+    const albums = document.createElement('div');
+    albums.classList.add('albums');
+    albums.classList.add('flex-center-column');
+
+    const title = document.createElement('div');
+    title.classList.add('title');
+
+    const titleLabel = document.createElement('label');
+    titleLabel.innerText = 'Albums';
+
+    const imageGroup = layoutAllImages();
+
+    //append all elements
+    title.appendChild(titleLabel);
+
+    albums.appendChild(title);
+
+    imagesAndAlbums.appendChild(albums);
+    
+    imagesAndAlbums.appendChild(imageGroup);
+
+
+    const album1 = createAlbum('name1');
+    const album2 = createAlbum('name2');
+    const album3 = createAlbum('name3');
+    const album4 = createAlbum('name4');
+
+    albums.appendChild(album1);
+    albums.appendChild(album2);
+    albums.appendChild(album3);
+    albums.appendChild(album4);
+
+
+    bodyOfGallery.appendChild(imagesAndAlbums);
 }
 
 //tests of stuff
@@ -170,16 +253,19 @@ if (1)
     layoutAllImages().appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
     const imageGroup = document.querySelector('#imageGroup');
     
-    for(let i = 1; i<= 10; i++)
+    for(let i = 1; i<= 3; i++)
     {
         imageGroup.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
     }    
 
-    imageGroup.appendChild(creatTextBox('test test', 'test'));
-
-    imageGroup.appendChild(creatTextBox('test test', 'test2'));
-
-    imageGroup.appendChild(creatTextBox('test test', 'test3'));
-
     layoutImageAndMettaData('some random logo', 'https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png');
+
+    removeAllChildNodes(bodyOfGallery);
+    layoutAlbumsAndImages();
+    const imageGroup2 = document.querySelector('#imageGroup');
+    for(let i = 1; i<= 10; i++)
+    {
+        imageGroup2.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
+    }   
 }
+
