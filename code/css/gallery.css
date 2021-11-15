@@ -158,6 +158,18 @@ this will alos include the css for the the metta data of the images */
     width: auto;
 }
 
+.imageGroupBody
+{
+    /* all images that the user as acces to  */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 /* image albums  */
 
 .albums

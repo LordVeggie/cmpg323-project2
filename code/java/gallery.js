@@ -1,5 +1,67 @@
 //this is where i will add the denamic content ofthe page to 
 const bodyOfGallery = document.querySelector('#bodyOfGallery');
+const imageButton = document.querySelector('#imageButton');
+const albumButton = document.querySelector('#albumButton');
+
+//all click event
+
+function imageButtonClick()
+{
+    removeAllChildNodes(bodyOfGallery);
+    bodyOfGallery.appendChild(layoutAllImages());
+
+    const imageGroupBody3 = document.querySelector('#imageGroupBody');
+
+    //removeAllChildNodes(imageGroupBody3);
+
+    for(let i = 1; i<= 3; i++)
+    {
+        imageGroupBody3.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
+    }   
+}
+
+function albumButtonClick()
+{
+    removeAllChildNodes(bodyOfGallery);
+    layoutAlbumsAndImages();
+}
+
+function defaulAlbumClick()
+{
+    const imageGroupBody3 = document.querySelector('#imageGroupBody');
+
+    //removeAllChildNodes(imageGroupBody3);
+
+    for(let i = 1; i<= 3; i++)
+    {
+        imageGroupBody3.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
+    }   
+}
+
+function imageClick()
+{
+    //when image is clicked on
+
+}
+
+function albumClick()
+{
+    //when album is clicked on 
+    const imageGroupBody3 = document.querySelector('#imageGroupBody');
+
+    removeAllChildNodes(imageGroupBody3);
+
+    for(let i = 1; i<= 3; i++)
+    {
+        imageGroupBody3.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
+    }   
+}
+
+imageButton.onclick = imageButtonClick;
+
+albumButton.onclick = albumButtonClick;
+
+//all creation and removal functions
 
 function removeAllChildNodes(parent) {
     //use this to change lay outs and use this to remove images when changing the albums
@@ -59,6 +121,8 @@ function createAlbum(name)
     const album = document.createElement('div');
     album.classList.add('album');
 
+    album.onclick = albumClick;
+
     const text = document.createElement('div');
     text.classList.add('albumText');
     text.innerText = name;
@@ -89,13 +153,18 @@ function layoutAllImages()
     const titleLable = document.createElement('label');
     titleLable.innerText = 'Images';
 
+    const imageGroupBody = document.createElement('div');
+    imageGroupBody.classList.add('imageGroupBody');
+    imageGroupBody.id = 'imageGroupBody';
+    
+
     //append all elements
 
     imageGroupTitle.appendChild(titleLable);
 
     imageGroup.appendChild(imageGroupTitle);
 
-    bodyOfGallery.appendChild(imageGroup);
+    imageGroup.appendChild(imageGroupBody);
 
     return imageGroup;
 }
@@ -182,27 +251,6 @@ function layoutImageAndMettaData(name, image)
     bodyOfGallery.appendChild(container);
 }
 
-//    <div class=" imagesAndAlbums">
-//
-//        <div class="albums flex-center-column">
-//            <!--list of albums-->
-//            <div class=" title ">
-//                <label for="title"> Albums </label>
-//            </div>
-//
-//            <!--this will be albums-->
-//
-//        </div>
-//
-//        <div class="  imageGroup ">
-//            <div class=" title ">
-//                <label for="title"> Default </label>
-//            </div>
-//
-//        </div>
-//
-//    </div>
-
 function layoutAlbumsAndImages()
 {
     //changes the layout of the page to show images according to the active album
@@ -221,25 +269,36 @@ function layoutAlbumsAndImages()
     const titleLabel = document.createElement('label');
     titleLabel.innerText = 'Albums';
 
+    const headOfAlbums = document.createElement('div');
+    headOfAlbums.style.width = '100%';
+
+    //image group
     const imageGroup = layoutAllImages();
+
+    //albums
+    const newAlbum = createAlbum('New album');
+    newAlbum.id = 'newAlbum';
+    const Default = createAlbum('Default');
+    Default.id = 'defaultAlbum';
+
+    Default.onclick = defaulAlbumClick;
+    
+    const album3 = createAlbum('name3');
+    const album4 = createAlbum('name4');
 
     //append all elements
     title.appendChild(titleLabel);
 
     albums.appendChild(title);
 
+    albums.appendChild(headOfAlbums);
+
     imagesAndAlbums.appendChild(albums);
     
     imagesAndAlbums.appendChild(imageGroup);
 
-
-    const album1 = createAlbum('name1');
-    const album2 = createAlbum('name2');
-    const album3 = createAlbum('name3');
-    const album4 = createAlbum('name4');
-
-    albums.appendChild(album1);
-    albums.appendChild(album2);
+    headOfAlbums.appendChild(newAlbum);
+    headOfAlbums.appendChild(Default);
     albums.appendChild(album3);
     albums.appendChild(album4);
 
@@ -250,22 +309,11 @@ function layoutAlbumsAndImages()
 //tests of stuff
 if (1)
 {
-    layoutAllImages().appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
-    const imageGroup = document.querySelector('#imageGroup');
-    
+    layoutAlbumsAndImages();
+    const imageGroupBody2 = document.querySelector('#imageGroupBody');
     for(let i = 1; i<= 3; i++)
     {
-        imageGroup.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
-    }    
-
-    layoutImageAndMettaData('some random logo', 'https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png');
-
-    removeAllChildNodes(bodyOfGallery);
-    layoutAlbumsAndImages();
-    const imageGroup2 = document.querySelector('#imageGroup');
-    for(let i = 1; i<= 10; i++)
-    {
-        imageGroup2.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
+        imageGroupBody2.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
     }   
 }
 
