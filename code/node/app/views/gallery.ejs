@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/gallery.css">
+</head>
+
+<body>
+
+    <div>
+        <!--this div makes sure the pace of the page works with out it no work-->
+        <div class=" navigationBar ">
+            <div class=" logoAndText ">
+                <!--this will be the title and loggo-->
+                <div class=" logo "></div>
+                <label>Snowy Owl</label>
+            </div>
+
+            <nav class=" navigation " width: 20%;>
+                <!--this will be navigation to account sign out and a few other stuff-->
+                <a href="/shared" class="navElement">Shared</a>
+                <a href="/home" class="navElement">Home</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="flex-center-column bodyOfPage">
+        <div>
+            <!--container for search and buttons-->
+
+        </div>
+        <div class="gallery">
+            <!--container for all images albumums and buttons-->
+            <div class="galleryButtonBox flex-row">
+                <!--container for buttons-->
+                <div class="galleryButtonLeft flex-center-column" id="imageButton">
+                    Images
+                </div>
+
+                <div class="galleryButtonRight flex-center-column" id="albumButton">
+                    Albums
+                </div>
+
+            </div>
+            <div id="bodyOfGallery">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../java/gallery.js"></script>
+
+</body>
+
+</html>
