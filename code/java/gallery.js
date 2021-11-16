@@ -1,5 +1,6 @@
 //this is where i will add the denamic content ofthe page to 
 const bodyOfGallery = document.querySelector('#bodyOfGallery');
+
 const imageButton = document.querySelector('#imageButton');
 const albumButton = document.querySelector('#albumButton');
 
@@ -41,22 +42,24 @@ function defaulAlbumClick()
 function imageClick()
 {
     //when image is clicked on
-
+    removeAllChildNodes(bodyOfGallery);
+    layoutImageAndMettaData('test', 'https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png');
 }
 
 function albumClick()
 {
     //when album is clicked on 
-    const imageGroupBody3 = document.querySelector('#imageGroupBody');
+    const imageGroupBody = document.querySelector('#imageGroupBody');
 
-    removeAllChildNodes(imageGroupBody3);
+    removeAllChildNodes(imageGroupBody);
 
     for(let i = 1; i<= 3; i++)
     {
-        imageGroupBody3.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
+        imageGroupBody.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
     }   
 }
 
+//whireing up all click events 
 imageButton.onclick = imageButtonClick;
 
 albumButton.onclick = albumButtonClick;
@@ -108,7 +111,7 @@ function creatImage(image)
     const Image = document.createElement('div');
     Image.classList.add('image');
     Image.style.backgroundImage = `url(${image})`;
-
+    Image.onclick = imageClick;
     //returns image
 
     return(Image)
@@ -310,10 +313,10 @@ function layoutAlbumsAndImages()
 if (1)
 {
     layoutAlbumsAndImages();
-    const imageGroupBody2 = document.querySelector('#imageGroupBody');
+    const imageGroupBody = document.querySelector('#imageGroupBody');
     for(let i = 1; i<= 3; i++)
     {
-        imageGroupBody2.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
+        imageGroupBody.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
     }   
 }
 
