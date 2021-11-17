@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <form action="" class="">
+    <div>
         <div>
             <!--this div makes sure the pace of the page works with out it no work-->
             <div class=" navigationBar ">
@@ -28,9 +28,10 @@
             </div>
         </div>
 
-        <div class="flex-row bodyOfPage">
+        <div id="bodyOfFriendPage" class="flex-row bodyOfPage">
             <!--this will be the rest of the page conternt-->
             <div class="frendListComntainer">
+
                 <div class=" friendList ">
                     <div class=" friendsTitle ">
                         <!--name of friend you chatting with-->
@@ -55,44 +56,9 @@
                         </div>
                     </div>
 
-                    <div class=" friend ">
-                        <div class="friendsText">
-                            jhonny
-                        </div>
-                    </div>
-
-                    <div class=" friend ">
-                        <div class="friendsText">
-                            jane
-                        </div>
-                    </div>
-
-                    <div class=" friend ">
-                        <div class="friendsText">
-                            bobby
-                        </div>
-                    </div>
-
-                    <div class=" friend ">
-                        <div class="friendsText">
-                            tim
-                        </div>
-                    </div>
-
-                    <div class=" friend ">
-                        <div class="friendsText">
-                            jhonny
-                        </div>
-                    </div>
-
-                    <div class=" friend ">
-                        <div class="friendsText">
-                            jane
-                        </div>
-                    </div>
-
                 </div>
             </div>
+
             <div class=" conversation ">
 
                 <div class=" Title ">
@@ -104,6 +70,8 @@
                     <!--blanck space-->
                 </div>
 
+
+                <!--this will be used to add a friend -->
                 <div class=" friendNew flex-row">
                     <!--new caht box-->
                     <div class="flex-center-column textbox-container">
@@ -118,6 +86,8 @@
 
                 </div>
 
+        
+                <!--this will be used to unfirend some one -->
                 <div class=" friendNew flex-center-column hidden">
                     <!--use this to remove firends-->
                     <div class=" flex-row flex-center-column">
@@ -132,7 +102,9 @@
 
             </div>
         </div>
-    </form>
+    </div>
+
+    <script src="../java/friends.js"></script>
 </body>
 
 </html>
