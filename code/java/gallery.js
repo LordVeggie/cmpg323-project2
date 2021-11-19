@@ -206,7 +206,7 @@ function layoutImageAndMettaData(name, image)
     const geoLocationTextBox = creatTextBox('GeoLocation', 'GeoLocation');
     const captuerByTextBox = creatTextBox('Captuered By', 'CaptuerBy');
     const captureDateTextBox = creatTextBox('Captuered Date', 'CaptureDate');
-
+    
     //gotta do some thing for tags ???
     const tagTextBox = creatTextBox('Tag', 'Tag');
 
