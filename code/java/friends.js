@@ -5,12 +5,12 @@ const bodyOfFriendPage = document.querySelector('#bodyOfFriendPage');
 
 function firendClick()
 {
-
+    
 }
 
 function newFriendClick()
 {
-
+    newFirendChat();
 }
 
 //whireing up all click events 
@@ -25,41 +25,6 @@ function removeAllChildNodes(parent)
         parent.removeChild(parent.firstChild);
     }
 }
-
-//<div class="frendListComntainer">
-//
-//    <div class=" friendList ">
-//        <div>
-//            <div class=" friendsTitle ">
-//                <!--name of friend you chatting with-->
-//                <label for="friendListTitle"> Friends </label>
-//            </div>
-//    
-//            <div class=" TopSpace ">
-//                <!--blanck space-->
-//            </div>
-//    
-//            <div class=" friend ">
-//                <div class="friendsText">
-//                    Add new Friend
-//                </div>
-//            </div>
-//        </div>
-//       
-//
-//        <!--this will be friends-->
-//        <div>
-//            <div class=" friend ">
-//                <div class="friendsText">
-//                    tim
-//                </div>
-//            </div>
-//        </div>
-//       
-//    
-//    </div>
-//</div>
-
 
 function createFriend(name)
 {
@@ -134,15 +99,28 @@ function createFriendList()
     bodyOfFriendPage.appendChild(container);
 }
 
+function newFirendChat()
+{
 
+}
+
+function friendChat()
+{
+
+}
+
+function createFriendPage()
+{
+    createFriendList();
+}
 //diffrent layouts 
 
 //tests of stuff
 if (1)
 {
     removeAllChildNodes(bodyOfFriendPage);
-    createFriendList();
-    
+    createFriendPage();
+
     const friendList = document.querySelector('#friendList');
 
     friendList.appendChild(createFriend('bobby'));
