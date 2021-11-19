@@ -17,6 +17,7 @@ mongoose.connect("mongodb+srv://Storm:%40Storm4321@cluster0.mpusy.mongodb.net/Pr
 
 app.use(express.static( path.join(__dirname,'/../../css')));
 app.use(express.static( path.join(__dirname,'/../../images_of_pages')));
+app.use(express.static( path.join(__dirname,'/java')));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'/views'));
@@ -47,8 +48,10 @@ app.get('/friends',(req, res) =>
     res.render('friends');
 })
 
-app.get('/gallery',(req, res) =>
+app.get('/gallery',async (req, res) =>
 {
+    const Images = await Image.find({});
+    console.log(Images);
     res.render('gallery');
 })
 

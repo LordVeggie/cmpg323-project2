@@ -34,7 +34,8 @@ const imageSchema = new mongoose.Schema
     },
     tags:
     [{
-        type: String
+        type: String,
+        lowercase: true
     }]    
 })
 
