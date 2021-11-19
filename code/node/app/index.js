@@ -25,12 +25,12 @@ app.set('views', path.join(__dirname,'/views'));
 
 app.get('/',(req, res) =>
 {
-    res.render('login');
+    res.render('v2/login');
 })
 
 app.get('/signup',(req, res) =>
 {
-    res.render('signup');
+    res.render('v2/signup');
 })
 
 app.get('/shared',(req, res) =>
@@ -50,8 +50,8 @@ app.get('/friends',(req, res) =>
 
 app.get('/gallery',async (req, res) =>
 {
-    const Images = await Image.find({});
-    console.log(Images);
+    //const Images = await Image.find({});
+    //console.log(Images);
     res.render('gallery');
 })
 

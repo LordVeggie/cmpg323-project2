@@ -314,9 +314,12 @@ if (1)
 {
     layoutAlbumsAndImages();
     const imageGroupBody = document.querySelector('#imageGroupBody');
+
     for(let i = 1; i<= 3; i++)
     {
-        imageGroupBody.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
+       imageGroupBody.appendChild(creatImage('https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png'));
     }   
+
+
 }
 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shared</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/gallery.css">
+    <link rel="stylesheet" href="/shared.css">
+</head>
+
+<body>
+    <div>
+        <div>
+            <!--this div makes sure the pace of the page works with out it no work-->
+            <div class=" navigationBar ">
+                <div class=" logoAndText ">
+                    <!--this will be the title and loggo-->
+                    <div class=" logo "></div>
+                    <label>Snowy Owl</label>
+                </div>
+
+                <nav class=" navigation ">
+                    <!--this will be navigation to account sign out and a few other stuff-->
+                    <a href="/gallery" class="navElement">Gallery</a>
+                    <a href="/friends" class="navElement">Friends</a>
+                    <a href="/home" class="navElement">Home</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="flex-row bodyOfPage">
+            <!--this will be the rest of the page conternt-->
+            <div class="frendListComntainer">
+                <div class=" friendList ">
+                    <div class=" friendsTitle ">
+                        <!--name of friend you chatting with-->
+                        <label for="chatTitle"> Friends </label>
+                    </div>
+                   
+                    <div class=" TopSpace ">
+                        <!--blanck space-->
+                    </div>
+
+                    <!--this will be friends-->
+                    <div id="firenList">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class=" conversation ">
+
+                <div class=" chatTitle ">
+                    <!--name of friend you chatting with-->
+                    <label for="chatTitle"> Bobby </label>
+                </div>
+
+                <div class=" chatNew flex-row ">
+                    <!--new caht box-->
+                    <div class="flex-center-column textbox-container">
+                        <!--this will be confirm password fiels-->
+                        <input type="newChatText" name="newChatText" id="newChatText" placeholder="text"
+                            class="textbox">
+                    </div>
+                    <div class="chatNewButtonsContainer">
+                        <!--this will be buttons button-->
+                        <button class="btn">Select Image</button>
+                        <button class="btn">Send</button>
+                    </div>
+                </div>
+
+                <div id="chats" class=" chats ">
+                    <div class=" TopSpace ">
+                        <!--blanck space-->
+                    </div>
+                    <!--this will be chat-->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>
